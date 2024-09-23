@@ -99,72 +99,13 @@ public class Homework4 {
 //    }
     private static void task5() {
         System.out.println("Задание 5. Таблица умножения");
-        int a = 1;
-        do {
-            System.out.print(a + "\t");
-            a++;
-        }
-        while (a < 10);
-        System.out.println("\t");
-        int b = 2;
-        do {
-            System.out.print(b + "\t");
-            b = b + 2;
-        }
-        while (b < 19);
-        System.out.println("\t");
-        int c = 3;
-        do {
-            System.out.print(c + "\t");
-            c = c + 3;
-        }
-        while (c < 28);
-        System.out.println("\t");
-        int d = 4;
-        do {
-            System.out.print(d + "\t");
-            d = d + 4;
-        }
-        while (d < 37);
-        System.out.println("\t");
-        int f = 5;
-        do {
-            System.out.print(f + "\t");
-            f = f + 5;
-        }
-        while (f < 46);
-        System.out.println("\t");
-        int t = 6;
-        do {
-            System.out.print(t + "\t");
-            t = t + 6;
-        }
-        while (t < 55);
-        System.out.println("\t");
-        int g = 7;
-        do {
-            System.out.print(g + "\t");
-            g = g + 7;
-        }
-        while (g < 64);
-        System.out.println("\t");
-        int s = 8;
-        do {
-            System.out.print(s + "\t");
-            s = s + 8;
-        }
-        while (s < 73);
-        System.out.println("\t");
-        int y = 9;
-        do {
-            System.out.print(y + "\t");
-            y = y + 9;
-        }
-        while (y < 82);
-        System.out.println("\t");
-
-
-    }
+        for (int i = 1; i <= 10; i++) {
+            for (int j = 1; j <= 10; j++) {
+                int g = j*i;
+                System.out.print(g+"\t");
+            }
+            System.out.println();
+    }   }
 
     ;
 
