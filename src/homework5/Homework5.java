@@ -105,8 +105,8 @@ public class Homework5 {
 
         int arrOddLength = 0;
         int arrEvenLength = 0;
-        int arrOddDigit=0;
-        int arrEvenDigit=0;
+        int arrOddDigit = 0;
+        int arrEvenDigit = 0;
 
 
         for (int i = 0; i < arrayLength; i++) {
@@ -115,9 +115,6 @@ public class Homework5 {
 
 
                 arrOddLength++;
-
-
-
 
 
             } else {
@@ -144,8 +141,6 @@ public class Homework5 {
         }
 
 
-
-
         System.out.println(Arrays.toString(array));
         System.out.println(Arrays.toString(arrayOddNumbers));
         System.out.println(Arrays.toString(arrayEvenNumbers));
@@ -161,22 +156,21 @@ public class Homework5 {
         System.out.println("Enter array length: ");
         int arrayLength = sc.nextInt();
         int[] array = new int[arrayLength];
-         int digit =0;
-         int i=0;
+        int digit = 0;
+        int i = 0;
 
-        for ( i = 0; i < arrayLength; i++) {
+        for (i = 0; i < arrayLength; i++) {
             array[i] = (r.nextInt(90) + 10);
-
 
 
         }
         System.out.println(Arrays.toString(array));
 
-            System.out.println("Enter x: ");
-            int x = sc.nextInt();
+        System.out.println("Enter x: ");
+        int x = sc.nextInt();
         for (int j = 0; j < arrayLength; j++) {
 
-            digit=array[j];
+            digit = array[j];
 
             if (x == digit) {
                 System.out.println("Данное число есть в массиве");
