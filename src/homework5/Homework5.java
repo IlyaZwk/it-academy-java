@@ -41,16 +41,11 @@ public class Homework5 {
         int counter1 = 1;
         for (int j = 0; j < arrayLength1; j++) {
             array1[j] = counter1;
-
             if (j % 2 == 0) {
                 counter1++;
-
-
             } else {
                 array1[j] = 0;
             }
-
-
         }
         System.out.println(Arrays.toString(array1));
     }
@@ -68,7 +63,6 @@ public class Homework5 {
 
             if (i % 2 == 0) {
                 continue;
-
             } else {
                 array[i] = 0;
             }
@@ -112,21 +106,12 @@ public class Homework5 {
         for (int i = 0; i < arrayLength; i++) {
             array[i] = (r.nextInt(90) + 10);
             if (array[i] % 2 == 0) {
-
-
                 arrOddLength++;
-
-
             } else {
-
-
                 arrEvenLength++;
-
-
             }
-
-
         }
+
         int[] arrayOddNumbers = new int[arrOddLength];
         int[] arrayEvenNumbers = new int[arrEvenLength];
 
@@ -161,8 +146,6 @@ public class Homework5 {
 
         for (i = 0; i < arrayLength; i++) {
             array[i] = (r.nextInt(90) + 10);
-
-
         }
         System.out.println(Arrays.toString(array));
 
@@ -175,8 +158,6 @@ public class Homework5 {
             if (x == digit) {
                 System.out.println("Данное число есть в массиве");
             }
-
         }
-
     }
 }
