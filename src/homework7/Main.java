@@ -17,19 +17,28 @@ public class Main {
     private static void task1() {
         System.out.println("task1:");
         String str = "Lorem Ipsum is simply dummy text of the printing and typesetting industry";
-        String strPatter = "y";
-        Pattern pattern = Pattern.compile(strPatter);
-        Matcher matcher = pattern.matcher(str);
-        String startEndTemplate = "%s  %d %n";
-        while (matcher.find()) {
-            System.out.println(matcher.group());
-            System.out.format(startEndTemplate, "position of the same symbol:", matcher.start());
+
+        for (int b = 0; b <= str.length()-1; b++) {
+            if (b == str.length()-1) {
+
+                Pattern pattern = Pattern.compile(String.valueOf(str.charAt(b)));
+                Matcher matcher = pattern.matcher(str);
+                String startEndTemplate = "%s  %d %n";
+                while (matcher.find()) {
+                    System.out.println(matcher.group());
+                    System.out.format(startEndTemplate, "position of the same symbol:", matcher.start());
+
+                }
+            }
 
         }
+
+
     }
 
     private static void task2() {
-        System.out.println("task2:");
+        System.out.println("task2");
+        System.out.println("Enter the text:");
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         boolean palindrom = false;
