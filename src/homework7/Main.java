@@ -18,16 +18,14 @@ public class Main {
         System.out.println("task1:");
         String str = "Lorem Ipsum is simply dummy text of the printing and typesetting industry";
 
-        for (int b = 0; b <= str.length()-1; b++) {
-            if (b == str.length()-1) {
+        for (int b = 0; b <= str.length() - 1; b++) {
+            if (b == str.length() - 1) {
+                System.out.println("Last letter of the text is: "+ str.charAt(b));
+                for (int a = 0; a <= str.length() - 1; a++) {
+                    if (str.charAt(a) == str.charAt(b)) {
 
-                Pattern pattern = Pattern.compile(String.valueOf(str.charAt(b)));
-                Matcher matcher = pattern.matcher(str);
-                String startEndTemplate = "%s  %d %n";
-                while (matcher.find()) {
-                    System.out.println(matcher.group());
-                    System.out.format(startEndTemplate, "position of the same symbol:", matcher.start());
-
+                        System.out.println("position of the same letter: " + a);
+                    }
                 }
             }
 
@@ -42,14 +40,11 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         boolean palindrom = false;
-        for (int a=0; a<=str.length()-1; a++){
-            for (int b=str.length()-1; b>=0; b--)
-            {
-                if (str.charAt(a) == str.charAt(b)){
+        for (int a = 0; a <= str.length() - 1; a++) {
+            for (int b = str.length() - 1; b >= 0; b--) {
+                if (str.charAt(a) == str.charAt(b)) {
                     palindrom = true;
-                }
-
-                else {
+                } else {
                     palindrom = false;
                 }
 
