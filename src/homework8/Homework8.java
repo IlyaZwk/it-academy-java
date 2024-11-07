@@ -25,35 +25,22 @@ public class Homework8 {
             newSwapMap.put(swap.getValue(), swap.getKey());
         }
         System.out.println("Result of mapSwap: " + newSwapMap);
+        System.out.println();
     }
     public static void task2() {
-        Map<String, List<Integer>> userMap = new HashMap<>();
-        List<Integer> petrovNums = new ArrayList<>();
-        petrovNums.add(1111);
-        petrovNums.add(1222);
-        petrovNums.add(1333);
-        List<Integer> sidorovNums = new ArrayList<>();
-        sidorovNums.add(2111);
-        sidorovNums.add(2222);
-        sidorovNums.add(2333);
-        List<Integer> ivanovNums = new ArrayList<>();
-        ivanovNums.add(3111);
-        ivanovNums.add(3222);
-        ivanovNums.add(3333);
-        userMap.put("Petrov", petrovNums);
-        userMap.put("Sidorov", sidorovNums);
-        userMap.put("Ivanov", ivanovNums);
-        printNum(userMap);
+        System.out.println("Task2:");
+        Map<String, ArrayList<Integer>> phoneBook = new HashMap<>();
+        Phonebook.addNum("Petrov",1111,phoneBook);
+        Phonebook.addNum("Petrov",1222,phoneBook);
+        Phonebook.addNum("Petrov",1333,phoneBook);
+        Phonebook.addNum("Ivanov",2111,phoneBook);
+        Phonebook.addNum("Ivanov",2222,phoneBook);
+        Phonebook.addNum("Ivanov",2333,phoneBook);
+        Phonebook.addNum("Sidorov",3111,phoneBook);
+        Phonebook.addNum("Sidorov",3222,phoneBook);
+        Phonebook.addNum("Sidorov",3333,phoneBook);
+        Phonebook.printBook(phoneBook);
     }
 
-    public static void printNum(Map<String, List<Integer>> userMap) {
-        for (var item : userMap.entrySet()) {
-            String nums = "";
-            System.out.println();
-            for (int i : item.getValue()) {
-                nums = nums + i + " ";
-            }
-            System.out.printf("%s: %s", item.getKey(), nums);
-        }
-    }
+
 }
