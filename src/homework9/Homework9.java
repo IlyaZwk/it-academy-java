@@ -33,7 +33,6 @@ public class Homework9 {
 
         ArrayIterator<Integer> stackIterator = new ArrayIterator<>(stack);
         for (int i = 0; i < stack.length; i++) {
-            int size = stack.length -i;
             int nextElement = stackIterator.next();
                 System.out.println("Popped element "+(i+1)+" : "+nextElement);
         }
