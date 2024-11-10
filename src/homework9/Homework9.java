@@ -24,36 +24,25 @@ public class Homework9 {
 
     public static void task2() {
         System.out.println("Task2");
-        Deque<String> stack = new ArrayDeque<>();
-        stack.push("Circle 1");
-        stack.push("Circle 2");
-        stack.push("Circle 3");
-        stack.push("Circle 4");
 
-        System.out.println("Stack before pop: " + stack);
+        Integer[] stack = {1,2,4,5,8};
+        System.out.println("Stack : " + Arrays.toString(stack));
 
-        String topCircle = stack.peek();
-        System.out.println("Top Circle: " + topCircle);
+        int topElement= stack[0];
+        System.out.println("Top element: " + topElement);
 
-        String poppedCircle1 = stack.pop();
-        System.out.println("Popped Circle 1: " + poppedCircle1);
+        ArrayIterator<Integer> stackIterator = new ArrayIterator<>(stack);
+        for (int i = 0; i < stack.length; i++) {
+            int size = stack.length -i;
+            int nextElement = stackIterator.next();
+                System.out.println("Popped element "+(i+1)+" : "+nextElement);
+        }
 
-        String poppedCircle2 = stack.pop();
-        System.out.println("Popped Circle 2: " + poppedCircle2);
-
-        String poppedCircle3 = stack.pop();
-        System.out.println("Popped Circle 3: " + poppedCircle3);
-
-        String poppedCircle4 = stack.pop();
-        System.out.println("Popped Circle 4: " + poppedCircle4);
-
-        System.out.println("Stack after  pops: " + stack);
-        boolean isEmpty= stack.isEmpty();
-        if (stack.isEmpty()) {
-            System.out.println("Empty Stack: " + stack);
-        } else {
-            System.out.println("Stack isnt empty!");
+        try {
+            System.out.println(stackIterator.next());
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Stack is empty!");
         }
     }
-
 }
+
