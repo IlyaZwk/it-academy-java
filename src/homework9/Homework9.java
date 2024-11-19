@@ -25,9 +25,8 @@ public class Homework9 {
     public static void task2() {
         // pop push to integer
         System.out.println("Task2");
-        System.out.println("Pop and push realised to Integer:");
         Integer[] intStack = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-        ArrayStack<Integer> stack = new ArrayStack<>(intStack);
+        ArrayStack stack = new ArrayStack(intStack);
         stack.push(1);
         stack.push(2);
         stack.push(3);
@@ -53,36 +52,7 @@ public class Homework9 {
             }
         }
         System.out.println("Stack after pops: " + temp2);
-
-// pop push to string
-
-        System.out.println("Pop and push realised to String:");
-        String[] strStack = {" ", " ", " ", " ", " ", " ", " ", " ", " ", " "};
-        ArrayStack<String> stackStr = new ArrayStack<>(strStack);
-        stackStr.push("a");
-        stackStr.push("b");
-        stackStr.push("c");
-        stackStr.push("d");
-        stackStr.push("f");
-        List<String> temp3 = new ArrayList<>();
-        for (int i = 0; i < strStack.length; i++) {
-            if (strStack[i] != " ") {
-                temp3.add(String.valueOf(strStack[i]));
-            }
-        }
-        System.out.println("Stack: " + temp3);
-        stackStr.popStr();
-        stackStr.popStr();
-        stackStr.popStr();
-        List<String> temp4 = new ArrayList<>();
-        for (int i = 0; i < strStack.length; i++) {
-            if (strStack[i] != " ") {
-                temp4.add(String.valueOf(strStack[i]));
-            }
-        }
-        System.out.println("Stack after pops: " + temp4);
     }
-
 }
 
 
