@@ -23,25 +23,66 @@ public class Homework9 {
     }
 
     public static void task2() {
+        // pop push to integer
         System.out.println("Task2");
-
-        Integer[] stack = {1,2,4,5,8};
-        System.out.println("Stack : " + Arrays.toString(stack));
-
-        int topElement= stack[0];
-        System.out.println("Top element: " + topElement);
-
-        ArrayIterator<Integer> stackIterator = new ArrayIterator<>(stack);
-        for (int i = 0; i < stack.length; i++) {
-            int nextElement = stackIterator.next();
-                System.out.println("Popped element "+(i+1)+" : "+nextElement);
+        System.out.println("Pop and push realised to Integer:");
+        Integer[] intStack = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        ArrayStack<Integer> stack = new ArrayStack<>(intStack);
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+        stack.push(4);
+        stack.push(12);
+        List<Integer> temp1 = new ArrayList<>();
+        for (int i = 0; i < intStack.length; i++) {
+            if (intStack[i] > 0) {
+                temp1.add(intStack[i]);
+            }
         }
-
-        try {
-            System.out.println(stackIterator.next());
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Stack is empty!");
+        System.out.println("Stack: " + temp1);
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        List<Integer> temp2 = new ArrayList<>();
+        for (int i = 0; i < intStack.length; i++) {
+            if (intStack[i] > 0) {
+                temp2.add(intStack[i]);
+            }
         }
+        System.out.println("Stack after pops: " + temp2);
+
+// pop push to string
+
+        System.out.println("Pop and push realised to String:");
+        String[] strStack = {" ", " ", " ", " ", " ", " ", " ", " ", " ", " "};
+        ArrayStack<String> stackStr = new ArrayStack<>(strStack);
+        stackStr.push("a");
+        stackStr.push("b");
+        stackStr.push("c");
+        stackStr.push("d");
+        stackStr.push("f");
+        List<String> temp3 = new ArrayList<>();
+        for (int i = 0; i < strStack.length; i++) {
+            if (strStack[i] != " ") {
+                temp3.add(String.valueOf(strStack[i]));
+            }
+        }
+        System.out.println("Stack: " + temp3);
+        stackStr.popStr();
+        stackStr.popStr();
+        stackStr.popStr();
+        List<String> temp4 = new ArrayList<>();
+        for (int i = 0; i < strStack.length; i++) {
+            if (strStack[i] != " ") {
+                temp4.add(String.valueOf(strStack[i]));
+            }
+        }
+        System.out.println("Stack after pops: " + temp4);
     }
+
 }
+
 
