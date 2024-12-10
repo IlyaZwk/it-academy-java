@@ -10,10 +10,21 @@ public class Homework11 {
 
     public static void main(String[] args) throws InterruptedException {
         Random r = new Random();
-        int hours=(r.nextInt(23) + 1);
-        int minutes=(r.nextInt(59) + 1);
-        int hours1=(r.nextInt(23) + 1);
-        int minutes1=(r.nextInt(59) + 1);
+        int randomMinutes=(r.nextInt(59) + 1);
+        int randomHours=(r.nextInt(23) + 1);
+        int randomMinutes1=(r.nextInt(59) + 1);
+        int randomHours1=(r.nextInt(23) + 1);
+        int hours=randomHours;
+        String minutes=""+randomMinutes;
+        int hours1=randomHours1;
+        String minutes1=""+randomMinutes1;
+
+        if (randomMinutes < 10) {
+            minutes="0"+randomMinutes;
+        }
+        if (randomMinutes1 < 10) {
+            minutes1="0"+randomMinutes1;
+        }
         String time = hours + ":" + minutes;
         String time1 = hours1 + ":" + minutes1;
         User user1 = new User("Grigoriy", "grisha2001@gmail.com", +3750000);
